@@ -1,0 +1,267 @@
+CSS
+/* Add styles here */
+body {
+    font-family: 'Cursive', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffccd5;
+    position: sticky;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+nav ul .dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.dropdown-menu li a { 
+    display: block; 
+    padding: 5px 10px; 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: normal; 
+  }
+.dropdown-menu li a:hover { 
+    background-color: #ffd7e8; 
+  }
+/* END NAVIGATION */
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Mengatur kontainer search dan keranjang agar berada dalam satu baris */
+.search-container {
+    display: flex; 
+    align-items: center;  
+}
+/* Ikon keranjang */
+.cart-icon {
+    margin-left: 10px;  
+}
+.cart-icon img {
+    width: 20px; 
+    height: auto; 
+    cursor: pointer;
+}
+/* END IKON KERANJANG */
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 50px 20px; 
+    background-color: #ffd7e8; 
+}
+
+.hero h1 {
+    font-size: 36px; 
+    color: #d63384; 
+}
+
+.hero button {
+    padding: 10px 20px; 
+    color: white;
+    background-color: #d63384 ;
+    border: none;
+    border-radius: 5px;
+}
+/* END HERO SECTION */
+
+/* Product list */
+.product-list {
+    display: flex; 
+    gap: 20px; 
+    transition: transform 0.5s ease; /* Transisi halus saat menggulir */
+}
+
+/* Product styling */
+.product {
+    text-align: center; 
+    border: 1px solid #ddd; 
+    padding: 10px;
+    width: 200px; /* Ubah nilai ini untuk mengatur lebar produk */
+    border-radius: 8px; 
+}
+/* Gambar produk */
+.product img {
+    max-width: 100%; /* Gambar akan menyesuaikan lebar produk */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 8px; 
+}
+
+/* Above hero section styling */
+.footer-hero {
+   background-color: #ffd7e8; 
+   padding: 20px; 
+   text-align: center; 
+}
+.footer-hero .footer-container {
+   max-width: 1200px; 
+   margin: 0 auto; 
+   padding: 20px; 
+}
+.footer-hero .logo {
+   font-size: 52px; 
+   color:#d63384; 
+   font-weight: bold; 
+   width: 150px; /* Ukuran logo */
+}
+.footer-hero .footer-tagline h2 {
+   font-size: 20px; 
+   margin-top: 55px; 
+   margin-right: 100px; 
+   color:black; 
+}
+.footer-hero .footer-social-media {
+   margin-top: 60px; 
+}
+.footer-hero .footer-social-media .social-icon {
+   margin: 0 10px; 
+   display:inline-block; 
+}
+.footer-hero .footer-social-media .social-icon img {
+   width:30px; /* Ukuran ikon media sosial */
+   height:auto;  
+}
+/* END ABOVE HERO SECTION STYLING */
+
+/* Footer styling */
+footer {
+   background-color:#ffccd5;  
+   color:black;  
+   padding :40px 0 ;  
+   font-size :14px ;  
+}
+.footer-container {
+   max-width :1200px ;  
+   margin :0 auto ;  
+   display:flex ;  
+   justify-content :space-between ;  
+   flex-wrap :wrap ;  
+}
+.footer-section {
+   width :30% ;  
+   margin-bottom :30px ;  
+}
+.footer-section h3 {
+   font-size :18px ;  
+   margin-bottom :15px ;  
+}
+.footer-section ul {
+   list-style-type:none ;  
+   padding :0 ;  
+}
+.footer-section ul li {
+   margin-bottom :10px ;  
+}
+.footer-section ul li a {
+   color:black ;  
+   text-decoration:none ;  
+}
+.footer-section ul li a:hover {
+   text-decoration :underline ;  
+}
+/* END FOOTER */
+
+/* Payment Icons */
+.payment-icons img {
+   width :40px ;  
+   margin-right :10px ;  
+}
+
+/* Mobile App Icons */
+.app-icons a img {
+   width :120px ;  
+   margin-right :10px ;  
+}
+
+/* Carousel Styles */
+.carousel {
+   position :relative ;  
+   width :100%; /* Mengatur lebar carousel agar responsif */
+   overflow:hidden ; /* Menyembunyikan produk yang keluar dari area carousel */
+}
+.product-list { /* Menggunakan Flexbox untuk menampilkan produk dalam satu baris */
+      flex-wrap:no-wrap ; /* Pastikan produk tidak melanjut ke baris berikutnya */
+      transition :transform 0.5s ease ; /* Transisi halus ketika menggulir produk */
+}
+.product { /* Pastikan produk tidak akan mengubah ukuran atau meluas */
+      flex :0 0 auto ;
+      width :270px ;
+      border :1px solid #ddd ;
+      border-radius :8px ;
+      transition :transform 0.3s ease ;
+}
+.product:hover { /* Efek hover pada produk */
+      transform :scale(1.05);
+}
+.carousel-btn { /* Tombol navigasi */
+      position:absolute ;
+      top :50%; /* Menempatkan tombol di tengah vertikal carousel */
+      background-color :transparent ;
+      color :#d63384 ;
+      font-size :30px ;
+      padding :0 ;
+      border:none ;
+      cursor:pointer ;
+      z-index :1 ;
+      transform :translateY(-50%);
+      transition :opacity 0.3s ease ;
+}
+.carousel-btn:hover { /* Efek hover pada tombol navigasi */
+      opacity :0.7 ;
+}
+.left-btn { left :10px;}
+.right-btn { right :10px;}
+/* Responsif untuk layar kecil */
+@media (max-width :600px) { /* Menyesuaikan ukuran produk untuk layar kecil */
+    .product { width :150px;} /* Ubah nilai ini untuk mengatur lebar produk di layar kecil */
+}
+@media (max-width :768px) { /* Responsif untuk header dan elemen lainnya pada layar kecil */
+     header { flex-direction :column ; align-items:flex-start;}
+     nav ul { flex-direction :column ; gap :10 px;}
+     .hero h1 { font-size :28 px;}
+     .hero button { font-size :14 px;padding :8 px 15 px;}
+     .product-list { flex-direction:flex-column;}
+     .product { width :100%;margin-bottom:15px;}
+}
